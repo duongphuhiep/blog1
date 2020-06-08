@@ -3,6 +3,7 @@ title: "Visual Basic, Macro Excel course (vietnamese)"
 date: 2015-10-02T23:50:49+02:00
 tags: ["vba", "excel", "visual basic", "macro"]
 draft: true
+category: "office"
 ---
 
 Many vietnamese friends ask me to teach them Excel, macro VBA.. it is not really my speciality... But ok, let's just learn it together! Here my friends..

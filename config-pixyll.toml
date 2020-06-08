@@ -1,0 +1,33 @@
+author                 = "Hiep"
+baseUrl                = "http://localhost:1313"
+buildDrafts            = false
+relativeURLs           = true
+canonifyUrls           = true
+languageCode           = "en-us"
+theme                  = "hugo-theme-pixyll"
+title                  = "Hiep's blog"
+enableEmoji            = true
+DefaultContentLanguage = "en"
+#disqusShortname        = ""
+
+[Languages]
+[Languages.en]
+weight = 1
+
+[Languages.ru]
+weight = 2
+
+[blackfriday]
+angledQuotes = true
+hrefTargetBlank = true
+
+[indexes]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  mainSections = ["post"]
+  search_engine = true
+  #google_analytics_id = ""
+  twitter_username = "username"
+  paginate = 5

@@ -19,3 +19,17 @@ I picked the (likely) most mature and popular one with a huge community backup..
 * add search capability
 * add comment capability (facebook and/or disq)
 * publish the blog on github.io
+
+https://github.com/pravin/hugo-theme-prav/
+https://themes.gohugo.io/pixyll/ => search
+https://themes.gohugo.io/mediumish-gohugo-theme/ => medium like
+https://themes.gohugo.io/simplicity/  => disq
+https://themes.gohugo.io//theme/github-style/
+
+
+https://themes.gohugo.io/hugo-lamp/
+https://themes.gohugo.io/kiss/
+https://themes.gohugo.io/papaya/
+https://themes.gohugo.io/hugo-starter/
+
+

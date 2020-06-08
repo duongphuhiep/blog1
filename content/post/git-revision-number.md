@@ -2,6 +2,7 @@
 title: "Git Revision Number"
 date: 2017-03-12T12:32:04+02:00
 tags: ["git"]
+category: "devops"
 draft: true
 ---
 As a former SVN user migrating to GIT, I miss the SVN revision number. 

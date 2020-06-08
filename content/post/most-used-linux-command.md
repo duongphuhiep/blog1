@@ -3,6 +3,7 @@ title: "Most Used Linux Command"
 date: 2015-12-01T10:41:58+02:00
 draft: true
 tags: ["linux", "vim", "nano"]
+category: "devops"
 ---
 
 # Limit Bandwidth, simulate slow network

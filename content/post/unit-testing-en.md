@@ -4,6 +4,7 @@ date: 2018-11-01T00:06:10+02:00
 tags: ["c#", "java", "xunit", "test"]
 language: "en"
 draft: true
+category: "backend"
 ---
 A long time ago, a certain CTO asked me to write unit tests for a legacy application in order to increase the [Sonar rating](https://docs.sonarqube.org/latest/user-guide/metric-definitions/).. I did all I could, and hardly covered up to 40% of the codes. My "unit tests" that I wrote can run only if the database was well configured with some specific data.. Many "unit tests" depend on the server of other teams..
 

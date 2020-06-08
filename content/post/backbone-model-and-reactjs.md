@@ -2,6 +2,7 @@
 title: "Backbone Model and Reactjs"
 date: 2016-01-05T21:41:58+02:00
 tags: ["reactjs", "backbone"]
+category: "frontend"
 draft: true
 ---
 I want to write opinions after reading some articles about using [Backbone Model](http://backbonejs.org/#Model) in [ReactJs](https://facebook.github.io/react/) applications.  
