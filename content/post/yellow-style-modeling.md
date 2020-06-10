@@ -3,7 +3,7 @@ title: "Yellow Style Modeling - Let's describe the World in some 2D tables"
 date: 2018-03-31T17:13:26+02:00
 tags: ["sql", "modeling", "rdbms", "uml"]
 draft: true
-category: "database"
+categories: ["database"]
 ---
 Some friends asked me
 

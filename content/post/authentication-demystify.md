@@ -2,7 +2,7 @@
 title: "Authentication Demystify"
 date: 2019-11-30T14:54:22+02:00
 tags: ["oauth2", "openid", "authentication", "jwt"]
-category: "security"
+categories: ["security"]
 draft: true
 ---
 

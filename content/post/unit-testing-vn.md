@@ -1,10 +1,10 @@
 ---
-title: "Unit Testing (vietnamese)"
+title: "Unit Testing"
 date: 2018-04-11T00:35:33+02:00
 tags: ["c#", "java", "xunit", "test"]
-language: "vn"
+language: "vietnamese"
 draft: true
-category: "backend"
+categories: ["backend", "test"]
 ---
 Lúc mới vào nghề, có lần Sếp yêu cầu tôi viết Unit Test cho 1 ứng dụng cũ của công ty để tăng [điểm Sonar](https://docs.sonarqube.org/latest/user-guide/metric-definitions/). Sau nhiều cố gắng, các "Unit test" của tôi cũng chỉ phủ được khoảng 40% đám codes của ứng dụng cũ đó. Hơn nữa, muốn chạy được các "Unit test" đó, cần phải cấu hình CSDL, có dữ liệu mẫu và kết nối với các Ứng dụng ngoài (được phát triển bởi các nhóm khác)
 

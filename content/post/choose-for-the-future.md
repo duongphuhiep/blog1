@@ -1,6 +1,9 @@
 ---
-title: "Choose for the Future (vietnamese)"
+title: "Choose for the Future"
 date: 2003-06-16T21:23:27+07:00
+categories: ["memory"]
+tags: ["java",".net"]
+language: "vietnamese"
 draft: true
 ---
 

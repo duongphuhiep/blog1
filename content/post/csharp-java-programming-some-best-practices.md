@@ -2,7 +2,7 @@
 title: "C# (or Java) Programming Best Practices"
 date: 2020-04-25T14:21:32+02:00
 tags: ["C#"]
-category: "backend"
+categories: ["backend"]
 draft: true
 ---
 Base on my years experiences in codes review, I recognized some best practices which is really simple to apply to sanitize the codes, make them more testable or reusable. Experienced developers might apply some of them and don't even realize it.

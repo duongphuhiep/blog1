@@ -2,7 +2,7 @@
 title: "Git Merge Conflicts"
 date: 2017-03-12T16:30:48+02:00
 tags: ["git"]
-category: "devops"
+categories: ["devops"]
 draft: true
 ---
 I used Github for years. Most of my personals projects are on Github. However I'm only an amateur Git user who only knowledgeable enough to work with one-person projects. I suppose that many Github's users (or evens a majority of them) are like me.

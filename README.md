@@ -20,6 +20,8 @@ I picked the (likely) most mature and popular one with a huge community backup..
 * add comment capability (facebook and/or disq)
 * publish the blog on github.io
 
+## Sample themes
+
 https://github.com/pravin/hugo-theme-prav/
 https://themes.gohugo.io/pixyll/ => search
 https://themes.gohugo.io/mediumish-gohugo-theme/ => medium like
@@ -32,4 +34,6 @@ https://themes.gohugo.io/kiss/
 https://themes.gohugo.io/papaya/
 https://themes.gohugo.io/hugo-starter/
 
+# My theme
 
+Font Righteous
