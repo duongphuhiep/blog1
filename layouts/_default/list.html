@@ -1,5 +1,4 @@
 {{define "main"}}
-    {{/* $paginator := .Paginate (where .Pages "Type" "posts") */}}
     {{ template "_internal/pagination.html" . }}
     
     {{ range .Paginator.Pages }}
@@ -9,7 +8,8 @@
             ({{.}})
         {{end}}
         </a> 
-         - 
-         {{.WordCount}} words</p>
+        <span>- {{ dateFormat "Jan 2, 2006" .PublishDate }}</span>
+        <span>- {{ .ReadingTime }} min read</span>
+         </p>
     {{ end }}
 {{end}}
