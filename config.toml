@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "https://example.com/"
+baseurl = "https://duongphuhiep.github.io"
 title = "Hiep's Blog"
 
 #theme = "hyde"
@@ -37,9 +37,9 @@ title = "Hiep's Blog"
     
     # please choose either GraphComment or Disqus or Utterances
     #GraphCommentId = "..."
-    #UtterancesRepo = "..." # https://utteranc.es/
-    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
-    #UtterancesTheme = "..." # github-light or github-dark
+    UtterancesRepo = "duongphuhiep/duongphuhiep.github.io" # https://utteranc.es/
+    UtterancesIssueTerm = "pathname" # pathname, url, title, og:title
+    UtterancesTheme = "github-light" # github-light or github-dark
 
     # Table of contents
     #toc = none, "hugo", or "tocbot"

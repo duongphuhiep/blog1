@@ -19,3 +19,7 @@
 [submodule "themes/hyde"]
 	path = themes/hyde
 	url = git@github.com:htr3n/hyde-hyde.git
+[submodule "public"]
+	path = public
+	url = git@github.com:duongphuhiep/duongphuhiep.github.io.git
+	branch = master
