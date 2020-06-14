@@ -1,2 +1,5 @@
 baseURL = "https://example.com/"
 title = "Hiep's Blog"
+
+[params]
+author = "DUONG Phu-Hiep"
