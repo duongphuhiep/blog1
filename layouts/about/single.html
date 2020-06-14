@@ -3,9 +3,12 @@
 {{ end }}
 
 {{ define "content" }}
-    {{ partial "page-list/content.html" . }}
+    <div class="post">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+  </div>
 {{ end }}
 
 {{ define "footer" }}
-    {{ partial "page-list/footer.html" . }}
+{{ partial "footer/font-awesome-js.html" . }}
 {{ end }}

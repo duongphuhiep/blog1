@@ -1,22 +1,13 @@
-{{define "main"}}
-    <h1>{{ .Title }}</h1> 
-    <div>{{ dateFormat "Jan 2, 2006" .PublishDate }}</div>
-    <div>{{ .ReadingTime }} min read - {{.WordCount}} words</div>
-    {{ range .Params.tags }}
-        <li>
-        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{.}}</a>
-        </li>
-    {{ end }}
+{{ define "header" }}
+    {{ partial "page-single/variables-init.html" . }}
+    {{ partial "header.html" . }}
+{{ end }}
 
-    <div class="article-post">
-        {{ .Content}}
-    </div>
-    
-    {{with .NextInSection}}
-        <a href="{{.Permalink}}"> &laquo; {{.Title}}</a>
-    {{end}}
-    ---
-    {{with .PrevInSection}}
-        <a href="{{.Permalink}}">{{.Title}} &raquo;</a>
-    {{end}}
-{{end}}
+{{ define "content" }}
+    {{ partial "page-single/content.html" . }}
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "page-single/footer.html" . }}
+    {{ partial "page-single/variables-deinit.html" . }}
+{{ end }}

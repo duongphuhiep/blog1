@@ -1,29 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body>
-        <div class="sidebar">
-            <div class="container">
-                <div class="sidebar-about">
-                    <h1>
-                        <a href="{{.Site.BaseURL}}">
-                        {{.Site.Title}}
-                        </a>
-                    </h1>
-                    {{ if not .IsHome }}
-                        <p class="lead">{{ .Title }}</p>
-                    {{end}}
-                </div>
-            </div>
-            <div>
-                
-            </div>
-        </div>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ block "header" . }}{{ end }}
+    <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+    {{ partial "sidebar.html" . }}
         <div class="content container">
-            {{ block "main" . }}
-            {{ end }}
+            {{ block "content" . }}{{ end }}
         </div>
+        {{ block "footer" . }}{{ end }}
     </body>
 </html>
