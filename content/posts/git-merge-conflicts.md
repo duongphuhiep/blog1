@@ -14,7 +14,7 @@ After a few days playing around with git, experiment all sort of branching mergi
 
 This article is not a tutorial, there is already many tutorials out there. The main purpose is to show you how to practices and learn Git yourself.
 
-# How to play with Git
+## How to play with Git
 
 * Create a new folder `git-playground`
 * In this folder, we will simulate a team of 2 persons: "**Bob**" and "**Dave**" working on a project called "demonic" on a shared repository `host`. 
@@ -82,7 +82,7 @@ git pull
 
 All the setup is done. You are ready to play!
 
-# Prepare the GUI tools
+## Prepare the GUI tools
 
 I mostly use command lines, but I prefer GUI tools for everything related to visualization such as 
 
@@ -97,7 +97,7 @@ The only tool I have to install in addition is [`meld`](http://meldmerge.org/). 
 
 You might also find more useful resources [here](https://github.com/duongphuhiep/duongphuhiep.github.io/wiki/Git)
 
-# Play a classic merge
+## Play a classic merge
 
 * **Bob** and **Dave** both commit some changes to `main.js`
 * **Bob** does a `git push` first
@@ -117,7 +117,7 @@ If there are conflicts, he will enter the process of solving the conflicts.
 * he can quit the process at anytime: `git merge --abort`
 * he can solve the conflict with help of `meld`: `git mergetool`
 
-# Play with Rebase
+## Play with Rebase
 
 Git provides 2 methods to merge branches: The classic merge, and the "rebase". Beginner often have trouble with the "rebase". 
 
@@ -146,7 +146,7 @@ After this command, he will enter the Rebase process. Each of his two commits wi
 * he can quit the process at anytime: `git rebase --abort`
 * he can solve the conflicts with help of `meld`: `git mergetool`
 
-# Long-live branch
+## Long-live branch
 
 - **Dave** creates a branch `topic001` and implements a big feature on it with many changes on `main.js`
 - It is a long live branch, that **Dave** won't merge it back to `master` anytime soon.
@@ -175,7 +175,7 @@ Lesson to learn: Git won't try to be smart and won't automaticly merge things fo
 
 It could happen that git detected a conflict, but when you open it with your external merge tool (eg. `meld`, `p4merge`..), your tool is smart enough to resolve common conflicts and automaticly merge the 2 files with no trouble. You can say that Git is stupid when it comes to auto-merging, it won't take evens a slightest risk. So a good merge tool is especially important to complement Git.
 
-## Other tools
+### Other tools
 
 They seem interesting, but I didn't try yet: 
 
@@ -183,7 +183,7 @@ They seem interesting, but I didn't try yet:
 
 * [Deep Git Blame](http://www.syntevo.com/deepgit/tour) - free tool to trace back origin of the codes. While solving conflicts, we often ask where did this code came from (and cause the conflict now)?
 
-# How to reduce conflicts
+## How to reduce conflicts
 
 I hears peoples claim that [git-flow](http://stackoverflow.com/a/13448924/347051) or a good use of [Rebase instead of Merge](https://www.derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/) will reduce the conflicts poping up.
 
@@ -202,7 +202,7 @@ If you regulary merge 2 branches so that they won't diverge too far from each ot
 
 Voilà, it is the only way to deal with conflicts. Don't expect any silver bullet on this matter.
 
-# How to rewrite history
+## How to rewrite history
 
 Unlike [Mecurial](https://www.mercurial-scm.org/), it is easy to change history in a Git repository. Even though I'm not a fan of changing the history. I don't care if my history is a mess of branches. 
 
@@ -224,14 +224,14 @@ To fix this situation, **Bob** will
 
 Read also: [Reset Demystified](https://git-scm.com/blog) *Honestly speaking, I didn't read it :)). But I got the 'feel' of 'git reset' by practicing*.
 
-# cherry-pick
+## cherry-pick
 
 It will also come in handy: You can pick some commit to replay, and ignore others.
 
 Sometime, I did some small commits on a "unstable" branch. Later I can cherry-pick some of these commits to merge to the "stable" branche, so that I can release them earlier on production without waiting for the unstable branch.
 
 
-# Conclusion
+## Conclusion
 
 As a professional coder, I tried to get confortable with at least one Centralize CVS (eg. SVN, TFS..) and one Distributed CVS (eg. Git, Mecurial..).
 
