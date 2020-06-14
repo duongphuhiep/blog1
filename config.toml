@@ -43,20 +43,21 @@ title = "Hiep's Blog"
 
     # Table of contents
     #toc = none, "hugo", or "tocbot"
+    toc = "tocbot"
 
 ## Social Accounts
 [params.social]
-    github = "<username>"
-    instagram = "<username>"
-    xing = "<username>"
-    linkedin = "<username>"
-    twitter = "<username>"
-    facebook = "<username>"
-    stackoverflow = "<username>"
-    telegram = "<username>"
-    # orcid = "<xxxx-xxxx-xxxx-xxxx>"
+    github = "duongphuhiep"
+    linkedin = "phu-hiep-duong-487b7428"
+    twitter = "duongphuhiep"
+    facebook = "duongphuhiep"
+    stackoverflow = "347051/hiep"
     email = "duongphuhiep@gmail.com"
     gravatar = "duongphuhiep@gmail.com"
+    # telegram = "<username>"
+    # xing = "<username>"
+    # instagram = "<username>"
+    # orcid = "<xxxx-xxxx-xxxx-xxxx>"
 
 ## Main Menu
 [[menu.main]]

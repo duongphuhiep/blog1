@@ -22,7 +22,6 @@ ul.pagination {
     font-size: 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 15px;
     color: $navigation-color;
     line-height: 1.25;
@@ -49,6 +48,7 @@ ul.pagination {
     .navigation-tittle {
       padding-left: 4px;
     }
+    justify-content: left;
   }
   .navigation-next {
     text-align: right;
@@ -58,6 +58,7 @@ ul.pagination {
     .navigation-tittle {
       padding-right: 4px;
     }
+    justify-content: right;
   }
 }
 .navigation-single a {
