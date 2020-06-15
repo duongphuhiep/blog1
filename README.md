@@ -1,6 +1,6 @@
-# My personal website
+![travis_ci](https://travis-ci.org/duongphuhiep/blog1.svg?branch=master)
 
-This is a work in progress
+# My personal website
 
 None of the free blogging platforms fit my taste!
 
@@ -20,7 +20,7 @@ I picked the (likely) most mature and popular one with a huge community backup..
 * add comment capability (facebook and/or disq)
 * publish the blog on github.io
 
-## Sample themes
+## Candidate themes
 
 * https://github.com/pravin/hugo-theme-prav/
 * https://themes.gohugo.io/pixyll/ => search
@@ -31,32 +31,3 @@ I picked the (likely) most mature and popular one with a huge community backup..
 * https://themes.gohugo.io/kiss/
 * https://themes.gohugo.io/papaya/
 * https://themes.gohugo.io/hugo-starter/
-
-.gitmodules
-```
-[submodule "themes/fuji"]
-	path = themes/fuji
-	url = https://github.com/amzrk2/hugo-theme-fuji.git
-[submodule "themes/hugo-theme-prav"]
-	path = themes/hugo-theme-prav
-	url = https://github.com/pravin/hugo-theme-prav/
-[submodule "themes/hugo-theme-pixyll"]
-	path = themes/hugo-theme-pixyll
-	url = https://github.com/azmelanar/hugo-theme-pixyll
-[submodule "themes/simplicity"]
-	path = themes/simplicity
-	url = https://github.com/eshlox/simplicity
-[submodule "themes/mediumish-gohugo-theme"]
-	path = themes/mediumish-gohugo-theme
-	url = https://github.com/lgaida/mediumish-gohugo-theme
-[submodule "themes/kiss"]
-	path = themes/kiss
-	url = https://github.com/ribice/kiss
-[submodule "themes/hyde"]
-	path = themes/hyde
-	url = git@github.com:htr3n/hyde-hyde.git
-```
-
-# My theme
-
-Font Righteous
