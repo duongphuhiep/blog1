@@ -10,8 +10,7 @@ before_install:
 
 deploy:
   provider: pages:git
-  token: <encrypted token>
   edge: true # opt in to dpl v2
   target_branch: master
   local_dir: public
-  repo: duongphhiep/duongphuhiep.github.io
+  repo: duongphuhiep/duongphuhiep.github.io
