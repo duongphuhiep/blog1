@@ -22,17 +22,40 @@ I picked the (likely) most mature and popular one with a huge community backup..
 
 ## Sample themes
 
-https://github.com/pravin/hugo-theme-prav/
-https://themes.gohugo.io/pixyll/ => search
-https://themes.gohugo.io/mediumish-gohugo-theme/ => medium like
-https://themes.gohugo.io/simplicity/  => disq
-https://themes.gohugo.io//theme/github-style/
+* https://github.com/pravin/hugo-theme-prav/
+* https://themes.gohugo.io/pixyll/ => search
+* https://themes.gohugo.io/mediumish-gohugo-theme/ => medium like
+* https://themes.gohugo.io/simplicity/  => disq
+* https://themes.gohugo.io//theme/github-style/
+* https://themes.gohugo.io/hugo-lamp/
+* https://themes.gohugo.io/kiss/
+* https://themes.gohugo.io/papaya/
+* https://themes.gohugo.io/hugo-starter/
 
-
-https://themes.gohugo.io/hugo-lamp/
-https://themes.gohugo.io/kiss/
-https://themes.gohugo.io/papaya/
-https://themes.gohugo.io/hugo-starter/
+.gitmodules
+```
+[submodule "themes/fuji"]
+	path = themes/fuji
+	url = https://github.com/amzrk2/hugo-theme-fuji.git
+[submodule "themes/hugo-theme-prav"]
+	path = themes/hugo-theme-prav
+	url = https://github.com/pravin/hugo-theme-prav/
+[submodule "themes/hugo-theme-pixyll"]
+	path = themes/hugo-theme-pixyll
+	url = https://github.com/azmelanar/hugo-theme-pixyll
+[submodule "themes/simplicity"]
+	path = themes/simplicity
+	url = https://github.com/eshlox/simplicity
+[submodule "themes/mediumish-gohugo-theme"]
+	path = themes/mediumish-gohugo-theme
+	url = https://github.com/lgaida/mediumish-gohugo-theme
+[submodule "themes/kiss"]
+	path = themes/kiss
+	url = https://github.com/ribice/kiss
+[submodule "themes/hyde"]
+	path = themes/hyde
+	url = git@github.com:htr3n/hyde-hyde.git
+```
 
 # My theme
 

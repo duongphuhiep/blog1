@@ -1,0 +1,17 @@
+sudo: required
+
+language: bash
+
+services:
+  - docker
+
+before_install:
+- docker run --rm -i -v $(pwd):/src klakegg/hugo:latest-ext
+
+deploy:
+  provider: pages:git
+  token: <encrypted token>
+  edge: true # opt in to dpl v2
+  target_branch: master
+  local_dir: public
+  repo: duongphhiep/duongphuhiep.github.io
