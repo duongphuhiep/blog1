@@ -1,5 +1,5 @@
 ---
-title: "How Did I Built My Blog"
+title: "How Did I Build My Blog"
 date: 2020-06-15T20:52:26+02:00
 categories: ["backend", "tool"]
 tags: ["hugo", "ssg"]
@@ -32,11 +32,11 @@ None of the FREE blogging platforms fit my taste! As a fullstack developper it w
 [codepen.io](https://codepen.io/dashboard) offers a free blog solution sastifying most of my requirements. Although, there are some limitations:
 
 * If you want to embed image in your post you must to upload it somewhere else.
-  * Tips: I usually Copy/Paste my image to a github issues editor => github will then generate an URL to the images, then I can use the URL anywhere.
+  * Tips: I usually Copy/Paste my images to a github issues editor => github will then generate an URL to the images, then I can use the URL anywhere.
 * You cannot embed **Youtube** or **Google Slides**
-* You cannot get rid of the codepen menu and the small sponsor.. (though it is not really relevant or hinder the reader in anyway).
+* You cannot get rid of the codepen menu and the small sponsor logo.. (though it is not really relevant or hinder the reader in anyway).
 
-Despite these minor limitations, I recommend **codepen.io** to all developers with similar requirements (If you don't want to get the hand dirty)
+Despite these minor limitations, I recommend **codepen.io** to all developers with similar requirements (If you don't want to get your hand dirty)
 
 ## Build my own blog
 
@@ -88,7 +88,7 @@ Here how I used [travis](https://travis-ci.org/) to make this magic happened.
 
 ## Comment capability
 
-Instead of paid solutions such as *muut*, *disqus*.., I used **utteranc.es**... You must to have a github account in order to comment on my blog. Most of my reader would be developers anyway. A developers without a github account shouldn't spam my blog so **utteranc.es** is the best fits in my case.
+Instead of paid solutions such as *muut*, *disqus*.., I used **utteranc.es**... You must to have a github account in order to comment on my blog. Most of my reader would be developers anyway. A developer without a github account shouldn't spam my blog so **utteranc.es** is the best fits in my case.
 
 ## Hidden screens
 
@@ -98,3 +98,11 @@ There is some hidden "screen" in my blog. They are called "taxonomies"
 * [categories list](/categories)
 
 I didn't expose them because they are not really useful.
+
+## This is just a start
+
+This Blog current theme is not meet 100% my satisfaction, and there is some functionalities I wanted to have in this blog (with no-cost again), but I have not found a way yet.
+
+You might notice the [codes sources of this blog](https://github.com/duongphuhiep/blog1) is "blog1", which means I might explorer other tooling / method to make "blog2", "blog3".. in the future, and just throw this "blog1" away...
+
+All that to say, this blog is just another toys for me to play with sometime and I don't intent to write new contents in a regular basis.
