@@ -25,7 +25,15 @@ As a programmers, you probably learned about:
 
 Unfortunately, many programmers don’t know how to apply these theories in the real world.
 
-In less than 30 slides, I will unlock some practical theories, make them more accessible to not only programmers but everybody.
+In less than 30 slides, I will unlock some practical theories, make them more accessible to not only programmers but to everybody:
+
+* The 7 patterns of relation in the slides 2 is your final take away. These 7 simple patterns are enough for you to modelize any kind of super complex Business's data. You don't need to know any other complicate theories.
+* Each of the pattern is described in detail with example in the following slides.
+* In the end, I give examples about how to use these 7 patterns to design and optimize the DATA for
+  * a Library Business
+  * a Role-Base Authorization System.
+  * a Cosmestics sales Business
+* Reader must to pay attention to the colors, the borders of the boxes and the arrows. They are not simply for decoration, but also carry other information. I called these drawing: the "Yellow-style" simply because the color Yellow usually appears the most in these drawings.
 
 {{< gslides src="https://docs.google.com/presentation/d/e/2PACX-1vRM8tkIlYDL-qKrsh2mRUULkoAuMLBpSMIo2vqVVr-Qr1i9JaKTKAtKM0vHfdQK5vaxEUYkAELpwlSZ/embed?start=false&loop=false&delayms=3000" >}}
 
