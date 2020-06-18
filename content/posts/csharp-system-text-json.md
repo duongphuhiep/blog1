@@ -16,7 +16,7 @@ However interesting comments show some missing factors in his benchmark.
 * Memory footprint usage is left out in the benchmark. So the benchmark is questionable in the multi-threading / big json scenario.
 * The [Wade Blog's post] show a Apple vs Orange in the benchmark of the [Michael Blog's post]: the case insensitive options are not the same default value.
   * The [Wade Blog's post] show also a massive improve in memory footprint of `System.Text.Json` compare to the `Newtonsoft.Json`.
-  * But in the speed benchmark, it left out the fact that the `System.Text.Json` is optimized for the Utf-8 encoding of HTTP message (not the Utf-16 encoding of the C# String) and conclude that the speed of `System.Text.Json` is only slightly faster than `Newtonsoft.Json`.
+  * But in the speed benchmark, it left out the fact that the `System.Text.Json` is optimized for the Utf-8 encoding of HTTP message (not the Utf-16 encoding of the C# String) and conclude that the speed of `System.Text.Json` is only slightly faster than `Newtonsoft.Json` which is optimal for Utf-16.
 
 ## My take away
 
