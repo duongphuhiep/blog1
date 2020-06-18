@@ -20,7 +20,7 @@ However interesting comments show some missing factors in his benchmark.
 
 ## My take away
 
-I beleive that Microsoft knows where they are going and capable to make the best .NET Json Serializer. They will improve futher the `System.Text.Json` package evens if it is (questionably) not the fastest one right now. In addition, the `System.Text.Json` package is open source and will probably attract talented contributors. It's time for me to [migrate from the `Newtonsoft.Json` to this new `System.Text.Json`](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to).
+I believe that Microsoft knows where they are going and capable to make the best .NET Json Serializer. They will improve futher the `System.Text.Json` package evens if it is (questionably) not the fastest one right now. In addition, the `System.Text.Json` package is open source and will probably attract talented contributors. It's time for me to [migrate from the `Newtonsoft.Json` to this new `System.Text.Json`](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to).
 
 [Michael Blog's post]: https://michaelscodingspot.com/the-battle-of-c-to-json-serializers-in-net-core-3/
 [Wade Blog's post]: https://dotnetcoretutorials.com/2020/01/25/what-those-benchmarks-of-system-text-json-dont-mention/

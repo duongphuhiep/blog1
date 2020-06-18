@@ -10,4 +10,4 @@ My native-language is vietnamese so you will find many english spelling issues e
 * Hopefully, my writing will improve with time, otherwise it will never improve.
 * Most of the reader are developers who usually understand english anyway.
 
-Sometimes (if somebody ask me to) I can re-write a post in vietnamese / or mix langauge contents.
+Sometimes (if somebody ask me to) I can re-write a post in vietnamese / or mixed languages contents.
