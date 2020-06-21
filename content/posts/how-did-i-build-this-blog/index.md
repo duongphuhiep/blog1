@@ -103,6 +103,8 @@ I didn't expose them because they are not really useful.
 
 This Blog current theme is not meet 100% my satisfaction, and there is some functionalities I wanted to have in this blog (with no-cost again), but I have not found a way yet.
 
-You might notice the [codes sources of this blog](https://github.com/duongphuhiep/blog1) is "blog1", which means I might explorer other tooling / method to make "blog2", "blog3".. in the future, and just throw this "blog1" away...
+You might notice the [codes sources of this blog](https://github.com/duongphuhiep/blog1) is "blog1", which means I might explorer other tooling / method to make "blog2", "blog3".. in the future, and just throw this "blog1" away. 
 
-All that to say, this blog is just another toys for me to play with sometime and I don't intent to write new contents in a regular basis.
+As a fan of [vuejs](https://vuejs.org/). I'm keeping an eye on the [vitepress project](https://github.com/vuejs/vitepress), I hope it will make it way to success and achieve maturity in a few years.
+
+All that to say, this blog is just another toy for me to play with sometimes and I don't intent to write new contents in a regular basis.

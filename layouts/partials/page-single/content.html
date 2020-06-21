@@ -1,4 +1,6 @@
 {{ $include_toc := .Params.include_toc}}
+{{ $hide_toc := .Params.hide_toc}}
+{{ $minWordCountToDisplayToc := .Site.Params.minWordCountToDisplayToc}}
 <article>
   <header>
     <h1>{{ .Title }}</h1>
@@ -10,7 +12,7 @@
     {{ partial "page-single/post-meta.html" . }}
   </header>
   
-  {{ if or (gt .WordCount 400 ) $include_toc }}
+  {{ if and (not $hide_toc) (or (gt .WordCount $minWordCountToDisplayToc) $include_toc) }}
   {{ $tableOfContents := .TableOfContents }}
   {{ with .Site.Params.toc }}
     <div class="toc-wrapper">

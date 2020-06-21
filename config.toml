@@ -44,6 +44,7 @@ enableRobotsTXT = true
     # Table of contents
     #toc = none, "hugo", or "tocbot"
     toc = "tocbot"
+    minWordCountToDisplayToc = 500
 
 ## Social Accounts
 [params.social]
