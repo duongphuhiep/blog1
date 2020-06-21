@@ -6,7 +6,7 @@ tags: ["di", "ioc", "autofac", "unittest"]
 keywords: ["unittest"]
 ---
 
-This is not an easy subject. I get confusion myself sometimes. So I always wanted to write about this subject since a long time ago. This big subject deserve a series of Posts, but I don't wanna  make it too long.
+This is not an easy subject. So I always wanted to write about it since a long time ago. This big subject deserves a series of Posts, but I don't wanna  make it too long.
 
 I will just express some random thoughts about DI in all kind of layers: principle's, theories, code practices. so this posts might be a little messy and un-structured!
 

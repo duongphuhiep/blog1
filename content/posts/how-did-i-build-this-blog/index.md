@@ -5,16 +5,16 @@ categories: ["backend", "tool"]
 tags: ["hugo", "ssg"]
 ---
 
-None of the FREE blogging platforms fit my taste! As a fullstack developper it was a shame if I can't built my own website..
+None of the FREE blogging platforms fit my taste! As a fullstack developer it was a shame if I can't built my own website..
 
 ## Requirements for my Blog
 
 * No-cost (otherwise it is a shame for me!)
 * Easy-to-read interface.
-  * peoples with slight vision imperfections (eg. Color Vision Deficiency) should be able to read my blog wihout much effort.
+  * peoples with slight vision imperfections (eg. Color Vision Deficiency) should be able to read my blog without much effort.
 * Manage content (CRUD) should not complicate.
-* I usually write text and codes snippets then Markdown is a no-brainer.
-  * Super complex and Rich contents usually go to my **Goolge Slides** => Ease to embeded the **Goolge Slides** in markdown contents is a requirement.
+* I usually write text and codes snippets so Markdown format is a no-brainer.
+  * Super complex and Rich contents usually go to my **Google Slides** => Ease to embedded the **Google Slides** in markdown contents is a requirement.
 * Comments capability: Reader would be able to comment to my blog posts
 
 ### Other nice-to-have functionalities
@@ -22,14 +22,14 @@ None of the FREE blogging platforms fit my taste! As a fullstack developper it w
 * Search
 * "like" button (or "clap" button)
 * a beautiful interface without the sacrifice of the "Easy-to-read interface" requirement
-  * "No" for weak-constrat themes (for eg. "gray text" on a "light gray background")
+  * "No" for weak-contrast themes (for eg. "gray text" on a "light gray background")
   * "No" for text blend on a image background
   * "No" for uses of multi-layer with transparent color
 * All the content should have backup (or revision history)
 
 ## codepen.io - An effortless solution
 
-[codepen.io](https://codepen.io/dashboard) offers a free blog solution sastifying most of my requirements. Although, there are some limitations:
+[codepen.io](https://codepen.io/dashboard) offers a free blog solution satisfying most of my requirements. Although, there are some limitations:
 
 * If you want to embed image in your post you must to upload it somewhere else.
   * Tips: I usually Copy/Paste my images to a github issues editor => github will then generate an URL to the images, then I can use the URL anywhere.
@@ -70,7 +70,7 @@ If you are a Web (or full-stack) developer then the learning step shouldn't be t
 
 ## Deployment
 
-Each time I push something to my [Blog codes sources](https://github.com/duongphuhiep/blog1) (eg. make changes in contents or theme), then it will be automaticly re-built and re-deploy to [my github page](https://github.com/duongphuhiep/duongphuhiep.github.io)
+Each time I push something to my [Blog codes sources](https://github.com/duongphuhiep/blog1) (eg. make changes in contents or theme), then it will be automatically re-built and re-deploy to [my github page](https://github.com/duongphuhiep/duongphuhiep.github.io)
 
 Here how I used [travis](https://travis-ci.org/) to make this magic happened.
 
