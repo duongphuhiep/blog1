@@ -13,8 +13,10 @@ None of the FREE blogging platforms fit my taste! As a fullstack developer it wa
 * Easy-to-read interface.
   * peoples with slight vision imperfections (eg. Color Vision Deficiency) should be able to read my blog without much effort.
 * Manage content (CRUD) should not complicate.
-* I usually write text and codes snippets so Markdown format is a no-brainer.
-  * Super complex and Rich contents usually go to my **Google Slides** => Ease to embedded the **Google Slides** in markdown contents is a requirement.
+* I usually write text and codes snippets so Markdown format is a no-brainer. In addition I often need to embed to my post external contents such as
+  * **Google Slides**: because super complex and Rich contents usually go to my **Google Slides**.
+  * **Github gist**: because I often make code demonstration.
+  * **Youtube**: a must-have
 * Comments capability: Reader would be able to comment to my blog posts
 
 ### Other nice-to-have functionalities
@@ -92,7 +94,7 @@ Instead of paid solutions such as *muut*, *disqus*.., I used **utteranc.es**... 
 
 ## Hidden screens
 
-There is some hidden "screen" in my blog. They are called "taxonomies"
+There are some hidden "screens" in my blog. They are called "taxonomies"
 
 * [tags list](/tags)
 * [categories list](/categories)
@@ -101,9 +103,9 @@ I didn't expose them because they are not really useful.
 
 ## This is just a start
 
-This Blog current theme is not meet 100% my satisfaction, and there is some functionalities I wanted to have in this blog (with no-cost again), but I have not found a way yet.
+This Blog current theme is not met 100% of my satisfaction, and there are some functionalities I wanted to have in this blog (with no-cost again), but I have not found a way yet.
 
-You might notice the [codes sources of this blog](https://github.com/duongphuhiep/blog1) is "blog1", which means I might explorer other tooling / method to make "blog2", "blog3".. in the future, and just throw this "blog1" away. 
+You might notice the [codes sources of this blog](https://github.com/duongphuhiep/blog1) is "blog1", which means I might explorer other tooling / method to make "blog2", "blog3".. in the future, and just throw this "blog1" away.
 
 As a fan of [vuejs](https://vuejs.org/). I'm keeping an eye on the [vitepress project](https://github.com/vuejs/vitepress), I hope it will make it way to success and achieve maturity in a few years.
 

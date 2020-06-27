@@ -31,13 +31,15 @@ Your library don't "USE" DI, but they should follow the "DI" principles. As long
 
 Don't get it wrong! Microsoft didn't try to unify all the .NET DI container, or build adapters for them.
 
-They only made their own DI Container for ASP.NET in the package [Microsoft.Extensions.DependencyInjection.Abstraction].
+They only made their own DI Container for ASP.NET in the package [Microsoft.Extensions.DependencyInjection.Abstraction]. Their DI Container is intentionally simple with very limited functionalities.
 
 It's just that [other library authors happen to implement the Microsoft's DI Container interface](https://github.com/aspnet/DependencyInjection). So that make this interface got the same advantage of a *Conforming Container*. However
 
 The [Microsoft.Extensions.DependencyInjection.Abstraction] is optimized for the Microsoft implementation and only in the context of the ASP.NET applications. It might not optimized for others DI frameworks and might not make sense in others context. So some DI frameworks might not compatible with this abstraction.
 
 ## Codes Samples
+
+([See full codes here](https://gist.github.com/duongphuhiep/8c9c1ecf4219b9f8ea2895d8d04330f6))
 
 I will demonstrate the [Microsoft.Extensions.DependencyInjection.Abstraction] and by using 2 popular implementations of this interface:
 
@@ -129,9 +131,18 @@ serviceCollection.AddScoped(typeof(IWalletRepository), svp => new WalletReposito
 serviceCollection.AddTransient(typeof(IWalletService), typeof(WalletService));
 
 ContainerBuilder containerBuilder = serviceProviderFactory.CreateBuilder(serviceCollection);
-// You can also use the Autofac specifics methods to register dependencies. For eg:
-// containerBuilder.RegisterType<TransactionRepository>().As<ITransactionRepository>();
 
+/*
+// You can also use the Autofac specifics methods to register dependencies. 
+
+// Example 1: 
+containerBuilder.RegisterType<TransactionRepository>().As<ITransactionRepository>();
+
+// Example 2: assembly scan
+containerBuilder.RegisterAssemblyTypes(typeof(WalletService).GetTypeInfo().Assembly)
+    .Except<WalletRepository>()
+    .AsImplementedInterfaces();
+*/
 #endregion
 
 IServiceProvider serviceProvider = serviceProviderFactory.CreateServiceProvider(containerBuilder);
@@ -155,14 +166,39 @@ Do we really need all of these thing? (`IServiceProviderFactory`, `IServiceColle
 
 In truth, most of the time that I use the Microsoft DI Framework simply because I was in the ASP.NET application. The ASP.NET framework is big enough to justify the utilization of a DI Framework. It also needs something to manage the **objects lifetime** (Controller scopes, Request scopes, Application/Singleton scopes), and it is also the role of a DI Container.
 
-Other than that, all of my applications is not big enough to justify the utilization of a DI Container. I usually use the [Custom or Default Pattern](https://www.rhyous.com/2017/11/08/avoiding-dependency-injections-constructor-injection-hell-by-using-the-custom-or-default-pattern/) to avoid the [Constructor Injection Hell](https://www.rhyous.com/2016/09/27/constructor-injection-hell/). It is also called the *Poor Man's Injection* or ironically the *Bastard Injection* - an **anti-pattern**. And yeah.. though well aware about all this, I still use this pattern in every applications which
+Other than that, all of my applications is not big enough to justify the utilization of a DI Container. I usually use the [Custom or Default Pattern] to avoid the [Constructor Injection Hell]. It is also called the *Poor Man's Injection* or ironically the *Bastard Injection* - an **anti-pattern**. And yeah.. though well aware about all this, I still use this pattern in every applications which
 
 * The object graph is not complicate.
 * Most of the dependencies are Singletons so the Objects Lifetime Management is not necessary.
 
-In this (common) situation, using a DI Framework give me more troubles than actual benefits. Moreover, I didn't turn every single thing to interface either, especially for idiots POCO objects. **As long as I can write unit test for my codes (which means as long as I can mock every I/O Codes) then it is good enough.** In order to mock the I/O Codes, I naturally turn most of the classes to Interface in the end. But I didn't blindly turn things into interface, if I did then it was for a good justifiable reason.
+In this (common) situation, using a DI Framework give me more troubles than actual benefits. Moreover, I didn't turn every single thing to interface either, especially for idiots POCO objects. **As long as I can write unit test for my codes (which means as long as I can mock every I/O Codes) then it is good enough**. In order to mock the I/O Codes, I naturally turn most of the classes to Interface in the end. But I didn't blindly turn things into interface, if I did then it was for a good justifiable reason.
 
-One day (which probably never come) if the application grow big enough to ask for a DI Framework, then include a DI Framework and refactor these codes shouldn't be much of a problem.
+One day (which probably never come) if the application grows big enough to ask for a DI Framework, then include a DI Framework and refactor these codes shouldn't be much of a problem.
+
+## Reduce the Dependencies graph complexities
+
+Application with a big complicate Dependencies graph is not something to proud of. A DI Container holding the dependencies graph, helps you to create super complicate objects, but does nothing to reduce the Dependencies Graph complexities.
+
+In truth, the [Custom or Default Pattern] (which I usually use in small to average applications) can help me to **hide** the [Constructor Injection Hell] not really help me to avoid it.
+
+### Mediator pattern
+
+While the facade pattern can help to reduce the [Constructor Injection Hell] by grouping some dependencies together; The [Mediator pattern] is the only tool which actually gives me the illusion of reducing the DI Graph complexities. This pattern tells that my component A doesn't need to depend directly on the component B and C but rather indirectly through a Mediator, so that A does not even know about the existence of B or C. Put it bluntly, A depends only on the Mediator instead of B and C.
+
+The [CQS principle] classify the communication between components into 2 categories **Command** and **Query**. The trend is to **apply the [CQS principle] on the [Mediator pattern]**:
+
+* Microsoft publish an excellent [article about CQRS and Mediator](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns)
+* In [this talk about the "Clean Architecture"](https://www.youtube.com/watch?v=5OtUm1BLmG0), Json Taylor demonstrated this practice in the **Application-level** of his "Clean Architecture".
+* The ["Clean Code" book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) and number of Post on dzone also talk about it.
+
+However, there's no one-fit-all solution of course, whatever beautiful or powerful a pattern is. The mediator pattern also [introduce other complexities](https://alex-klaus.com/mediator/). I also think that Coupling the Mediator with the [CQS principle] like that will make the mediator acts much like the [Event Sourcing](https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a) or a [Service Locator](https://en.wikipedia.org/wiki/Service_locator_pattern) the anti-pattern which make software harder to test.
+
+My recommendation is that you should know about all of these patterns and library. They are powerful TOOLs you definitely have to learn. But in the actually application, make stupid codes first, don't apply any pattern first hand until you find a strong argument to justify them.
+
 
 [Microsoft.Extensions.DependencyInjection.Abstraction]: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1
 [Dependency inversion principle]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
+[Custom or Default Pattern]: https://www.rhyous.com/2017/11/08/avoiding-dependency-injections-constructor-injection-hell-by-using-the-custom-or-default-pattern/
+[Constructor Injection Hell]: https://www.rhyous.com/2016/09/27/constructor-injection-hell/
+[CQS principle]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
+[Mediator pattern]: https://en.wikipedia.org/wiki/Mediator_pattern
