@@ -2,7 +2,7 @@
 title: "Dependencies Injection"
 date: 2020-06-21T12:04:25+02:00
 categories: ["backend"]
-tags: ["di", "ioc", "autofac", "unittest"]
+tags: ["di", "ioc", "autofac", "unittest", "mediatr", "mediator", "cqrs", "cqs"]
 keywords: ["unittest"]
 ---
 
@@ -187,11 +187,11 @@ While the facade pattern can help to reduce the [Constructor Injection Hell] by 
 
 The [CQS principle] classify the communication between components into 2 categories **Command** and **Query**. The trend is to **apply the [CQS principle] on the [Mediator pattern]**:
 
-* Microsoft publish an excellent [article about CQRS and Mediator](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns)
+* Microsoft publish an excellent [article about CQRS and Mediator](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api)
 * In [this talk about the "Clean Architecture"](https://www.youtube.com/watch?v=5OtUm1BLmG0), Json Taylor demonstrated this practice in the **Application-level** of his "Clean Architecture".
 * The ["Clean Code" book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) and number of Post on dzone also talk about it.
 
-However, there's no one-fit-all solution of course, whatever beautiful or powerful a pattern is. The mediator pattern also [introduce other complexities](https://alex-klaus.com/mediator/). I also think that Coupling the Mediator with the [CQS principle] like that will make the mediator acts much like the [Event Sourcing](https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a) or a [Service Locator](https://en.wikipedia.org/wiki/Service_locator_pattern) so inherits all [the disadvantages of this anti-pattern](https://alex-klaus.com/mediator/).
+However, there's no one-fit-all solution of course, whatever beautiful or powerful a pattern is. The mediator / CQRS pattern might [fit in some use cases but not for others](https://softwareengineering.stackexchange.com/a/352872). It also [introduce other complexities](https://stackoverflow.com/a/62095189/347051). I also think that Coupling the Mediator with the [CQS principle] like that will make the mediator acts much like the [Event Sourcing](https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a) or a [Service Locator](https://en.wikipedia.org/wiki/Service_locator_pattern) so inherits all [the disadvantages of this anti-pattern](https://alex-klaus.com/mediator/).
 
 ## Conclusion
 
