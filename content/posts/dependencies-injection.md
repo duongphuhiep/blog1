@@ -1,14 +1,14 @@
 ---
-title: "Dependencies Injection"
+title: "Dependencies Injection, MediatR+CQRS"
 date: 2020-06-21T12:04:25+02:00
 categories: ["backend"]
 tags: ["di", "ioc", "autofac", "unittest", "mediatr", "mediator", "cqrs", "cqs"]
 keywords: ["unittest"]
 ---
 
-This is not an easy subject. So I always wanted to write about it since a long time ago. This big subject deserves a series of Posts, but I don't wanna  make it too long.
+These are not easy subjects. I always wanted to write about them since a long time ago. These big subjects worth a series of Posts, but I don't wanna  make it too long.
 
-I will just express some random thoughts about DI in all kind of layers: principle's, theories, code practices. so this posts might be a little messy and un-structured!
+I will just express some random thoughts about them in all kind of layers: principle's, theories, code practices. so this posts wil be messy and un-structured!
 
 ## Conforming Container
 
