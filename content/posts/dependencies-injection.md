@@ -191,10 +191,19 @@ The [CQS principle] classify the communication between components into 2 categor
 * In [this talk about the "Clean Architecture"](https://www.youtube.com/watch?v=5OtUm1BLmG0), Json Taylor demonstrated this practice in the **Application-level** of his "Clean Architecture".
 * The ["Clean Code" book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) and number of Post on dzone also talk about it.
 
-However, there's no one-fit-all solution of course, whatever beautiful or powerful a pattern is. The mediator pattern also [introduce other complexities](https://alex-klaus.com/mediator/). I also think that Coupling the Mediator with the [CQS principle] like that will make the mediator acts much like the [Event Sourcing](https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a) or a [Service Locator](https://en.wikipedia.org/wiki/Service_locator_pattern) the anti-pattern which make software harder to test.
+However, there's no one-fit-all solution of course, whatever beautiful or powerful a pattern is. The mediator pattern also [introduce other complexities](https://alex-klaus.com/mediator/). I also think that Coupling the Mediator with the [CQS principle] like that will make the mediator acts much like the [Event Sourcing](https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a) or a [Service Locator](https://en.wikipedia.org/wiki/Service_locator_pattern) so inherits all [the disadvantages of this anti-pattern](https://alex-klaus.com/mediator/).
 
-My recommendation is that you should know about all of these patterns and library. They are powerful TOOLs you definitely have to learn. But in the actually application, make stupid codes first, don't apply any pattern first hand until you find a strong argument to justify them.
+## Conclusion
 
+My recommendation is that you should know about all of these patterns and library. They are powerful TOOLs you definitely have to learn, the benefits might big enough to over-shadow the drawbacks.
+
+Many developers usually got excited about all these sweet techniques and hastily practice them everywhere, justify by all the goodies of these techniques without asking if all the goodies are real for the situation at hand?
+
+Therefore, I usually start develop the stupid / obvious codes first without any pattern until I "feel like" the needs of a DI Container or a Mediator. Don't forget that, each time you introduce a new "technique", then your original obvious codes will likely become less obvious. It is tricky to recognize this fact because the codes you wrote are always obvious for you, but not for other readers / reviewers (or evens for yourself in 2 years..).
+
+There is no perfect solution, but the right balance in your decision.
+
+I made number of small applications / components. Each time somebody asked me did I *"use Dependencies Injection"* or is my Architecture *"Clean"*.. most of time I (shamefully) said No. I hope that my codes are obvious to the point that there is no cool (and complicate) technique that need to be show or to be explained.
 
 [Microsoft.Extensions.DependencyInjection.Abstraction]: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1
 [Dependency inversion principle]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
