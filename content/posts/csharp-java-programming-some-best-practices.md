@@ -177,54 +177,54 @@ public class MailInfo
   * [Test codes is often harder to write than main codes.](https://medium.com/@duongphuhiep/unit-testing-94a3a560309e) But please, at least.. think about how you would write test to your new class / methods evens if you don't actually write the test.
   * If you think about how to write the test for your class, you will naturally refactor your class to make it easier to test and make the better codes.
 
-## 5. A wrapper for a `IDisposable` object should also be a `IDisposable`
+## 5. A class which create a new `IDisposable` object should also be a `IDisposable`
 
-If a object `A` is tighly-couple with a `IDisposable` object `B` and mean to be created and disposed together then think about making `A` a `IDisposable` as `B`.
-
-It means: if `A` depends on a `IDisposable` `B` then
-
-* if `A` cannot function properly without `B` (after `B` is disposed) then `A` must also be a `IDisposable` and should be disposed along with `B` as well.
-* if for some reason, you can't make `A` as disposable then please make sure that `A` will continue to work normally (or die gracefully) after `B` is disposed.
+* It is highly recommended that when you create a `new IDisposable`, do it in a `using`
+* But for some reason, you cannot create `new IDisposable` in a "using", and you have to keep your new `IDisposable` object alive for an unforseenable time then think about making the parent class `IDisposable`. In other word: You should make your class `IDisposable` and free all other `IDisposable` which is created during its life.
 
 Example BAD:
 
 ```csharp
-public class DataContextDecorator
+public class A
 {
-    public readonly DataContext core; //this is a IDisposable
+    public IDisposable b;
  
-    public DataContextDecorator(DataContext core)
+    public M()
     {
-        this.core = core
+        this.b = new SomeDisposable(); //A created something Disposable and keep it alive (not use "using")
     }
 }
 ```
 
-A better version
+A better version: make A also disposable and explicitly clean all the left-over IDisposable which it created during its life time.
 
 ```csharp
-public sealed class DataContextDecorator : IDisposable //we will make this wrapper IDisposable too
+public class A: IDisposable
 {
-    public readonly DataContext core; //this is a IDisposable
-
-    public DataContextDecorator(DataContext core)
+    public IDisposable b;
+ 
+    public M()
     {
-        this.core = core
+        this.b = new SomeDisposable(); //A created something Disposable and keep it alive (not use "using")
     }
-
-    public void Dispose()
+    
+    public void Dispose() 
     {
-        dataContext.Dispose(); //the core live and die with the wrapper
+        if (b != null) b.Dispose();
     }
 }
 ```
 
 ## 6. Focus to code reusable inside application, not outside application
 
-If you are NOT making a framework or a library to publish elswhere then
+If you are NOT making a framework or a library to publish else-where then
 
 * Don't try to make everything reusable outside of your application by abusing `Reflection` and `Generic` whenever you recognize a possible patterns.
 * Please don't anticipate that your codes might be reused by other applications.. If it'll comes true (one day), we can always refactor it later.. => Focus to make your code easy to read (by others) and effective specifically for your current application first.
+
+Unless you really want to make a framework or a generic library, then engage to publish and maintain it in a proper repository with support, documentation etc.. There is no point to make everything as Generic as possible. We usually have Generic for common things already, find something popular / standard / well maintain then just use it. 
+
+If you have to code something reusable then make it generic "enough" for your 2, 3 uses cases at hand, but do not make it super generic / abstract thinking that other peoples will use it for 1 milions others uses cases.
 
 ## 7. Don't blame old codes, try to enhance them!
 
