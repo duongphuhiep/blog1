@@ -251,4 +251,4 @@ It's been a long time since this post, my team and I collaborate in git on a dai
 * We use UI tools such as [Fork](https://git-fork.com/)(free), [Gitkraken](https://www.gitkraken.com/)(paid) to visualize history, search for commits messages etc.. and sometime to resolve conflicts as well.
 * We use IDEs to resolve conflict (no longer use meld or `mergetool`).
 * We use IDE to make commits, because we always go-over all the changes one last time + make sure everything compile before commit. It is more pratical to checks directly in the IDE.
-* I still use git commands for around 30% for everything which I thought that I'm faster with the command line than the UI
+* I still use git commands line for many things.. as long as it make me faster than doing the same thing via UI. Sometimes a small command line worth many click + searching on UI, so I used UI mostly to visualize things. Here my [most used git command](https://gist.github.com/duongphuhiep/0801616d8c87bb71c535e8fbcd71e263)
