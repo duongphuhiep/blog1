@@ -242,3 +242,13 @@ On the Distributed side, I choose Git which is a little more difficult (more ver
 * Just play with Git a lot, explore its power. No book is better than practicing yourself. Once you got a hold on it, I doubt that you will look back to something else.
 
 Enjoy the game!
+
+
+# Update 2021
+
+It's been a long time since this post, my team and I collaborate in git on a daily basis. The way we used git evole:
+
+* We use UI tools such as [Fork](https://git-fork.com/)(free), [Gitkraken](https://www.gitkraken.com/)(paid) to visualize history, search for commits messages etc.. and sometime to resolve conflicts as well.
+* We use IDEs to resolve conflict (no longer use meld or `mergetool`).
+* We use IDE to make commits, because we always go-over all the changes one last time + make sure everything compile before commit. It is more pratical to checks directly in the IDE.
+* I still use git commands for around 30% for everything which I thought that I'm faster with the command line than the UI
